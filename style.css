@@ -19,7 +19,7 @@ body {
 
 .logo {
     height: 32px;
-    animation: fadeLogo 0.7s cubic-bezier(0.02, 0.01, 0.21, 1) forwards;
+    animation: fadeLogo 0.7s cubic-bezier(0.02, 0.01, 0.21, 1) forwards, logoscale 1s 0.4s cubic-bezier(0.02, 0.01, 0.21, 1) forwards;
     transform: translate3d(0, 100%, 0);
 }
 
@@ -32,7 +32,7 @@ h1.tagline {
 .noidea {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
     line-height: 0;
     transform: translate3d(0, 100%, 0);
     animation: movin 1s 0.4s cubic-bezier(0.02, 0.01, 0.21, 1) forwards;;
@@ -42,7 +42,7 @@ h1.tagline {
     font-size: 18px;
     color: #ffffffa4;
     opacity: 0;
-    animation: fadeIn 0.7s 0.5s cubic-bezier(0.02, 0.01, 0.21, 1) forwards;
+    animation: fadeIn 0.7s 1s cubic-bezier(0.02, 0.01, 0.21, 1) forwards;
 }
 
 @keyframes fadeIn {
@@ -65,6 +65,15 @@ h1.tagline {
     }
     to{
         transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes logoscale {
+    from {
+        transform: scale(1);
+    }
+    to{
+        transform: scale(0.8);
     }
 }
 
