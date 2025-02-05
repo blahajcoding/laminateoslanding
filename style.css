@@ -15,6 +15,9 @@ body {
     align-items: center;
     transition: all 0.5s cubic-bezier(0.02, 0.01, 0.21, 1) allow-discrete;
     text-align: center;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 .logo {
@@ -35,7 +38,7 @@ h1.tagline {
     gap: 12px;
     line-height: 0;
     transform: translate3d(0, 100%, 0);
-    animation: movin 1s 0.4s cubic-bezier(0.02, 0.01, 0.21, 1) forwards;;
+    animation: movin 1s 0.4s cubic-bezier(0.02, 0.01, 0.21, 1) forwards, narrateLater 1s 2s linear forwards;
 }
 
 .note {
@@ -86,5 +89,39 @@ h1.tagline {
         opacity: 1;
         filter: blur(0px);
         transform: scale(1);
+    }
+}
+@keyframes narratelater {
+    from {
+        
+    }
+    to {
+        -webkit-user-select: text;
+        -ms-user-select: text;
+        user-select: text;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .centered-div {
+        animation: none;
+    }
+    .logo {
+        animation: none;
+        transform: translate3d(0, 0%, 0);
+    }
+    .noidea {
+        animation: none;
+        transform: translate3d(0, 0%, 0);
+    }
+    .note {
+        animation: none;
+        transform: 0, 0, 0;
+        opacity: 100%;
+    }
+    h1.tagline {
+        animation: none;
+        opacity: 100%;
+        filter: blur(0);
     }
 }
