@@ -15,9 +15,6 @@ body {
     align-items: center;
     transition: all 0.5s cubic-bezier(0.02, 0.01, 0.21, 1) allow-discrete;
     text-align: center;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
 }
 
 .logo {
